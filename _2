@@ -1,7 +1,16 @@
 #даны два числа. вывести большее из них
-a=int(input())
-b=int(input())
-if a>b:
-    print(a)
-elif b>a:
-    print(b)
+a=input('Введите первое число')
+b=input('Введите второе число')
+while type(a,b)!=int():
+    try:
+        a!=int(a)
+        b!=int(b)
+        if a > b:
+            print(a)
+        elif b > a:
+            print(b)
+    except ValueError:
+        print('неправильно ввели')
+        a = input('Введите трехзначное число:')
+        b = input('Введите трехзначное число:')
+
